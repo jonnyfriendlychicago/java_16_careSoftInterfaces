@@ -8,22 +8,26 @@ public interface HIPPACompliantAdmin {
 	
 	// DEFAULT IMPLEMENTED METHODS
 	// Used to print security incidents. 
-	public default void printSecurityIncidents() {
-		System.out.println(reportSecurityIncidents());
-	}
 	
-	// QA Test, PASS/FAIL of reports against QA expected results
-	public default boolean adminQATest(ArrayList<String> expectedIncidents) {
-		if (reportSecurityIncidents().equals(expectedIncidents)) {
-			System.out.println("PASS");
-		}
-		else {
-			System.out.println("FAIL");
-		}
-		return reportSecurityIncidents().equals(expectedIncidents);
-	}
-	
+//	JRF: below seems extraneous - commented out; 
 
+//	public default void printSecurityIncidents() {
+//		System.out.println(reportSecurityIncidents());
+//	}
+//	
+//	
+//	// QA Test, PASS/FAIL of reports against QA expected results
+//	public default boolean adminQATest(ArrayList<String> expectedIncidents) {
+//		if (reportSecurityIncidents().equals(expectedIncidents)) {
+//			System.out.println("PASS");
+//		}
+//		else {
+//			System.out.println("FAIL");
+//		}
+//		return reportSecurityIncidents().equals(expectedIncidents);
+//	}
+
+// end of interfaces
 }
 
 
